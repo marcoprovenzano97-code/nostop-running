@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BOZZA: togliere noindex al lancio ufficiale -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Calcola le tue zone di corsa — NOSTOP. RUNNING</title>
+  <meta name="description" content="Calcolatore gratuito NOSTOP.: inserisci una gara recente e scopri le tue zone di passo (lento, soglia, VO2max) e i tempi previsti su 5 km, 10 km, mezza e maratona.">
+  <link rel="icon" href="img/logo-nostop.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="NOSTOP. RUNNING home">
+      <img src="img/logo-nostop.svg" alt="NOSTOP."><span>RUNNING</span>
+    </a>
+    <button class="menu-toggle" aria-label="Apri menu"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="index.html#metodo">Il metodo</a>
+      <a href="club.html">Run club</a>
+      <a href="index.html#abbonamenti">Abbonamenti</a>
+      <a class="active" href="calcolatore.html">Calcola le tue zone</a>
+      <a href="consigli.html">Consigli</a>
+      <a class="btn btn-black" href="index.html#lista-attesa">lista d'attesa</a>
+    </nav>
+  </div>
+</header>
+
+<section class="soft" style="padding-top:72px">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">#letuezone</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">calcola le tue zone</h1>
+      <p class="lead">Inserisci il tempo di una gara o di un test recente (ultime 6 settimane, corso a tutta). Ti diamo i passi per ogni tipo di allenamento.</p>
+    </div>
+
+    <div class="calc">
+      <form id="calc-form" class="card">
+        <label for="dist">Distanza</label>
+        <select id="dist">
+          <option value="3000">3 km</option>
+          <option value="5000" selected>5 km</option>
+          <option value="10000">10 km</option>
+          <option value="21097.5">Mezza maratona</option>
+          <option value="42195">Maratona</option>
+        </select>
+        <label>Tempo</label>
+        <div class="time-row">
+          <div><input id="h" type="number" min="0" max="9" value="0" inputmode="numeric"><small>ore</small></div>
+          <div><input id="m" type="number" min="0" max="59" value="25" inputmode="numeric"><small>minuti</small></div>
+          <div><input id="s" type="number" min="0" max="59" value="0" inputmode="numeric"><small>secondi</small></div>
+        </div>
+        <button class="btn btn-black" type="submit">calcola</button>
+        <p class="note" style="text-align:left">Non hai una gara recente? Corri 30' a tutta in piano dopo un buon riscaldamento e inserisci la distanza percorsa come test: un piano NOSTOP. ti guida passo passo.</p>
+      </form>
+
+      <div id="out"><div class="empty">Inserisci distanza e tempo e premi <b>calcola</b>.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap split">
+    <div>
+      <span class="tag">#ilpassosuccessivo</span>
+      <h2>ora trasformale in un piano</h2>
+      <p class="lead" style="margin-top:18px">Conoscere le zone è l'inizio. Con NOSTOP. RUNNING ogni seduta usa questi passi, arriva sul tuo orologio e si aggiorna quando migliori.</p>
+    </div>
+    <div><a class="btn btn-lime" href="index.html#lista-attesa">entra in lista d'attesa</a></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="img/logo-nostop-running.svg" alt="NOSTOP. RUNNING"><div class="hashtag">#nonfermarti</div></div>
+      <div><h4>running</h4><a href="index.html#metodo">Il metodo</a><a href="club.html">Run club</a><a href="index.html#abbonamenti">Abbonamenti</a><a href="index.html#coach">Coach</a></div>
+      <div><h4>strumenti</h4><a href="calcolatore.html">Calcola le tue zone</a><a href="consigli.html">Consigli</a></div>
+      <div><h4>NOSTOP.</h4><a href="https://www.footballnostop.it/">NOSTOP. Football</a><a href="https://www.instagram.com/football_nostop/">Instagram</a><a href="https://www.facebook.com/footballnostop/">Facebook</a></div>
+    </div>
+    <div class="legal"><span>© <span id="year">2026</span> NOSTOP.</span><a href="https://www.footballnostop.it/privacy">Informativa sulla privacy</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/calcolatore.js"></script>
+</body>
+</html>
