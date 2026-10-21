@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>NOSTOP. RUNNING app</title>
+  <link rel="icon" href="../img/logo-nostop.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <span class="logo"><b>NOSTOP.</b><span>RUNNING</span></span>
+    <div class="seg" role="group" aria-label="Vista" id="segVista" hidden>
+      <button type="button" id="vCoach" aria-pressed="true">coach</button>
+      <button type="button" id="vAtleta" aria-pressed="false">anteprima atleta</button>
+    </div>
+    <span class="spacer"></span>
+    <span class="proto" id="chi"></span>
+    <button type="button" class="linkbtn" id="aggiorna" hidden>aggiorna</button>
+    <button type="button" class="linkbtn" id="esci" hidden>esci</button>
+  </div>
+</header>
+<main class="page" id="app"><p class="loading">caricamento…</p></main>
+<div class="toast" id="toast" hidden></div>
+
+<script src="vendor/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="generatore.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
