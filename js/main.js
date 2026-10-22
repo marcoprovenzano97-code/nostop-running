@@ -11,6 +11,16 @@ async function nostopInsert(table, row) {
   return true;
 }
 
+// App installata: all'apertura (start_url ?app=1) chi ha già fatto l'accesso va dritto alla sua area.
+// Chi non è collegato, o torna alla home dal logo dell'app, vede il sito.
+(() => {
+  try {
+    const avvioApp = new URLSearchParams(location.search).has('app');
+    const loggato = !!localStorage.getItem('sb-wuoyibztquqnqxkjlftz-auth-token');
+    if (avvioApp && loggato) location.replace('app/');
+  } catch (e) { /* localStorage non disponibile: resta sul sito */ }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');

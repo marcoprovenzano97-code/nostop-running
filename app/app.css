@@ -204,3 +204,8 @@ svg.chart .pl { fill: var(--bar-soft); } svg.chart .dn { fill: var(--bar); } svg
 [hidden] { display: none !important; }
 .sbody { overflow-x: hidden; }
 .sbody > *, .chat, .msg { min-width: 0; overflow-wrap: anywhere; }
+/* collegamenti alle pagine del sito nella barra dell'app */
+.top nav.sito { display: flex; gap: 12px; font-size: .84rem; font-weight: 700; }
+.top nav.sito a { color: var(--ink); text-decoration: none; }
+.top nav.sito a:hover { color: var(--lime-ink); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 560px) { .top nav.sito { order: 10; width: 100%; } .top .proto { display: none; } }

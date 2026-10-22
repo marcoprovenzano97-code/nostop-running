@@ -334,3 +334,8 @@ table.zones td.pace { font-weight: 800; color: var(--ink); white-space: nowrap; 
   .ev-date b { font-size: 1.6rem; }
   .pace-groups { grid-template-columns: 1fr 1fr; }
 }
+
+/* accesso all'area riservata (app) */
+.nav a.accedi { border: 2px solid var(--ink); border-radius: 10px; padding: 8px 16px; font-weight: 800; }
+.nav a.accedi:hover { background: var(--ink); color: var(--lime); }
+@media (max-width: 860px) { .nav a.accedi { width: auto; margin-top: 6px; } }
